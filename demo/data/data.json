@@ -1,0 +1,11 @@
+{
+    "items":
+    [
+         {
+             "nombre" : "Consola Playstation 5 Con Lector De Discos Ps5",
+             "precio" : "$4.799",
+             "imagen" : "./imgs/ps51.webp",
+             "cantidad": 6
+         }
+    ]
+}   
