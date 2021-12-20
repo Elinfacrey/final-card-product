@@ -57,13 +57,18 @@ async firstUpdated(){
 
   }
 
+  Continuar(event) {
+    this.dispatchEvent(new CustomEvent('continue-clicked', { bubbles: true, composed: true}));
+    console.log("Probando evento confirmar compra",event)
+  }
+
   // Define a template
   render() {
     return html`
       <slot></slot>
       <div class="final-card-product">
       ${this.items.map((i) => html `
-      <bbva-web-card-product   image="${i.imagen}" heading="${i.nombre}" preheading="Nuevo" subheading="cantidad : ${i.cantidad}" button-text="Confirmar Compra" link-text="Envìo gratis">
+      <bbva-web-card-product   image="${i.imagen}" heading="${i.nombre}" preheading="Nuevo" subheading="cantidad : ${i.cantidad}" button-text="Confirmar Compra" link-text="Envìo gratis"  @button-click=${this.Continuar}>
       </bbva-web-card-product>
        <br>
       `)}  
